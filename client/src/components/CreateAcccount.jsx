@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CreateAccount = () => {
   const [formData, setFormData] = useState({
@@ -9,30 +10,15 @@ const CreateAccount = () => {
     company: "",
     isAgency: "yes",
   });
-  const [vaild, setvaild] = useState(false);
 
   const handleChange = (e) => {
-    // e.target.preventDeafult();
+    e.target.preventDeafult();
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
-
-  // Form validation
-  useEffect(() => {
-    if (
-      formData.fullName &&
-      formData.phone &&
-      formData.email &&
-      formData.password
-    ) {
-      setvaild(true);
-    } else {
-      setvaild(false);
-    }
-  }, [formData.fullName, formData.phone, formData.email, formData.password]);
 
   return (
     <div className="flex flex-col items-center justify-between  px-4 py-6 mt-9">
@@ -158,12 +144,12 @@ const CreateAccount = () => {
         </div>
         {/* Submit Button */}
         <div className="w-full max-w-md mt-6 sm:static sm:mt-6 fixed bottom-0 mx-auto left-0 right-0 px-4 py-4 ">
-          <button
-            disabled={!vaild}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 disabled:cursor-not-allowed cursor-pointer"
+          <Link
+            to={"/login"}
+            className="flex justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 disabled:cursor-not-allowed cursor-pointer"
           >
             Create Account
-          </button>
+          </Link>
         </div>
       </form>
     </div>

@@ -6,7 +6,7 @@ const Home = () => {
     <div className="px-4 flex flex-col justify-between">
       {/* Header Section */}
       <div className="bottom-34 fixed sm:static sm:w-md sm:mx-auto">
-        <h1 className="text-[28px] sm:text-[36px] text-[#1D2226] font-bold">
+        <h1 className="text-[28px] sm:text-[36px] text-[#1D2226] font-bold mt-4">
           Welcome to PopX
         </h1>
         <p className="text-black/60 text-[18px] sm:text-[20px] max-w-2xs mt-2">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="mt-6 flex items-center justify-center px-4 ">
-      <div className="w-full max-w-sm sm:max-w-xl sm:mt-20 space-y-4">
+      <div className="w-full max-w-sm sm:max-w-2xl sm:mt-20 space-y-4 sm:shadow-2xl sm:p-4 sm:h-[60vh]">
         {/* Heading */}
         <div>
           <h1 className="text-2xl font-bold text-[#1D2226]">Signin to your</h1>
@@ -51,7 +51,7 @@ const Login = () => {
         {/* Login Button */}
         <Link
           to={"/home"}
-          className="flex justify-center w-full bg-[#CBCBCB] text-white font-semibold py-2 px-4 rounded-md cursor-pointer hover:bg-[#7255657b] hover:text-black transition-all duration-300"
+          className="flex justify-center sm:mt-26 w-full bg-[#CBCBCB] text-white font-semibold py-2 px-4 rounded-md cursor-pointer hover:bg-[#7255657b] hover:text-black transition-all duration-300"
         >
           Login
         </Link>
